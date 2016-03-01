@@ -1,19 +1,34 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.monstertv" name="[COLOR green]MonsterTV[/COLOR]" version="1.0.1.0" provider-name="Juarrox">
+<addon id="plugin.video.monstertv" name="[COLOR purple]MonsterTV[/COLOR]" version="1.0.2.0" provider-name="Juarrox">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.requests" /> 
-    <import addon="plugin.video.youtube" />	
-	<import addon="script.module.youtube.dl" optional="true"/>
+	<import addon="plugin.video.youtube" optional="true"/>		
 	<import addon="plugin.video.SportsDevil" optional="true"/>
 	<import addon="plugin.video.p2p-streams" optional="true"/>
+	<import addon="program.plexus" optional="true"/>	
+	<import addon="script.module.t0mm0.common" version="1.0.0"/>
+	<import addon="script.module.beautifulsoup" version="3.2.1"/>
+	<import addon="script.module.requests" /> 
+	<import addon="script.module.youtube.dl" optional="true"/>    
+	<import addon="script.common.plugin.cache"/>	
+    <import addon="script.module.m3u8" version="0.2.2"/>
+    <import addon="script.module.dateutil" version="2.4.2"/>
+	<import addon="xbmc.python" version="2.1.0" />
+    <import addon="script.module.beautifulsoup4" optional="false"/>
+    <import addon="script.module.html5lib" optional="false"/>
+    <import addon="script.module.feedparser" optional="false"/>
+    <import addon="script.module.xbmcswift2" optional="false"/>
+    <import addon="script.module.simplejson" optional="false"/>
+    <import addon="script.module.metahandler" optional="false"/>
+    <import addon="script.module.httplib2" optional="false"/>
+    <import addon="script.module.mctools" optional="true"/>	
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
         <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-   <summary lang="en">[COLOR green]MonsterTV[/COLOR]</summary>
-    <description lang="en">[COLOR red][B][COLOR blue]MonsterTV[/COLOR][/B][/COLOR] ESTE ADDON ES SOLO UNA MODIFICACION DE PALCO TV TODOS LOS MERITO SON PARA SU CREADOR Juarrox AL CUAL AGRADECEMOS TODO SU ESFUERZO AL CREAR PALCO TV </description>
+  <summary lang="en">[COLOR purple]MonsterTV[/COLOR]</summary>
+    <description lang="en">[COLOR red][B][COLOR blue]MonsterTV[/COLOR][/B][/COLOR] ESTE ADDON ES SOLO UNA MODIFICACION DE PALCO TV TODOS LOS MERITO SON PARA SU CREADOR Juarrox AL CUAL AGRADECEMOS TODO SU EFUERZO EN CREAR PALCO TV </description>
     <disclaimer lang="en">[B]Queda prohibida la distribución de este addon junto con contenidos multimedia protegidos por derechos de autor.[/B] La vulneración de esta prohibición exonerará de culpa a su autor siendo el único responsable quien lo haya distribuido ilegalmente.</disclaimer>
     <platform>all</platform>
   </extension>

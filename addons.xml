@@ -1,41 +1,88 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-<addon id="plugin.video.exodus" version="1.0.1" name="Exodus" provider-name="l*m*d*">
-	<requires>
-		<import addon="xbmc.python" version="2.19.0" />
-		<import addon="repository.exodus" version="1.0.0" />
-		<import addon="script.exodus.artwork" version="1.0.0" />
-		<import addon="script.module.urlresolver" version="2.10.11"/>
-		<import addon="script.module.metahandler" version="1.0.0" />
-		<import addon="plugin.video.youtube" optional="true" />
-	</requires>
-	<extension point="xbmc.python.pluginsource" library="default.py">
-		<provides>video</provides>
-	</extension>
-	<extension point="xbmc.addon.metadata">
-		<summary lang="en">Exodus</summary>
-		<description lang="en">Please visit www.tvaddons.ag for Exodus support and assistance! Kindly note that Exodus is not an official part of the media player you are running, and therefore not to be mentioned within official support channels, this addon has nothing to do with the media player itself, nor it’s intended use, it is simply a third party plugin which has been added to your system.</description>
-		<disclaimer lang="en">The author does not host or distribute any of the content displayed by this addon. The author does not have any affiliation with the content provider.</disclaimer>
-		<platform>all</platform>
-	</extension>
-</addon>
-
-<addon id="plugin.video.monstertv" name="[COLOR green]MonsterTV[/COLOR]" version="1.0.1.0" provider-name="Juarrox">
+<addon id="plugin.video.adryanlist"
+       name="AdryanList"
+       version="2.0.1"
+       provider-name="Doc Shadrach">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.beautifulsoup" version="3.2.1"/>
+    <import addon="script.module.simple.downloader" version="0.9.4"/>
+    <import addon="script.module.beautifulsoup4" />
     <import addon="script.module.requests" />
+    <import addon="script.module.httplib2" />
+    <import addon="script.module.youtube.dl" optional="true"/>
     <import addon="plugin.video.youtube" />
-	<import addon="script.module.youtube.dl" optional="true"/>
+    <import addon="script.module.urlresolver" optional="true"/>
+    <import addon="script.module.simplejson" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>based on livestreamspro 2.0.1 by Shani</summary>
+    <description>Lista de canales de Adryan.</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.monstertv" name="[COLOR purple]MonsterTV[/COLOR]" version="1.0.2.0" provider-name="Juarrox">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="plugin.video.youtube" optional="true"/>
 	<import addon="plugin.video.SportsDevil" optional="true"/>
 	<import addon="plugin.video.p2p-streams" optional="true"/>
+	<import addon="program.plexus" optional="true"/>
+	<import addon="script.module.t0mm0.common" version="1.0.0"/>
+	<import addon="script.module.beautifulsoup" version="3.2.1"/>
+	<import addon="script.module.requests" />
+	<import addon="script.module.youtube.dl" optional="true"/>
+	<import addon="script.common.plugin.cache"/>
+    <import addon="script.module.m3u8" version="0.2.2"/>
+    <import addon="script.module.dateutil" version="2.4.2"/>
+	<import addon="xbmc.python" version="2.1.0" />
+    <import addon="script.module.beautifulsoup4" optional="false"/>
+    <import addon="script.module.html5lib" optional="false"/>
+    <import addon="script.module.feedparser" optional="false"/>
+    <import addon="script.module.xbmcswift2" optional="false"/>
+    <import addon="script.module.simplejson" optional="false"/>
+    <import addon="script.module.metahandler" optional="false"/>
+    <import addon="script.module.httplib2" optional="false"/>
+    <import addon="script.module.mctools" optional="true"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
         <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-   <summary lang="en">[COLOR green]MonsterTV[/COLOR]</summary>
-    <description lang="en">[COLOR red][B][COLOR blue]MonsterTV[/COLOR][/B][/COLOR] ESTE ADDON ES SOLO UNA MODIFICACION DE PALCO TV TODOS LOS MERITO SON PARA SU CREADOR Juarrox AL CUAL AGRADECEMOS TODO SU ESFUERZO AL CREAR PALCO TV </description>
+  <summary lang="en">[COLOR purple]MonsterTV[/COLOR]</summary>
+    <description lang="en">[COLOR red][B][COLOR blue]MonsterTV[/COLOR][/B][/COLOR] ESTE ADDON ES SOLO UNA MODIFICACION DE PALCO TV TODOS LOS MERITO SON PARA SU CREADOR Juarrox AL CUAL AGRADECEMOS TODO SU EFUERZO EN CREAR PALCO TV </description>
     <disclaimer lang="en">[B]Queda prohibida la distribución de este addon junto con contenidos multimedia protegidos por derechos de autor.[/B] La vulneración de esta prohibición exonerará de culpa a su autor siendo el único responsable quien lo haya distribuido ilegalmente.</disclaimer>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="plugin.video.movie.ultra.7k" name="[COLOR blue][B]Movie [COLOR white]Ultra [COLOR blue]7K [COLOR white]+[/B][/COLOR]" version="4.0.2" provider-name="Portal Black Box TV">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="plugin.video.youtube" optional="true"/>
+	<import addon="plugin.video.SportsDevil" optional="true"/>
+	<import addon="plugin.video.p2p-streams" optional="true"/>
+	<import addon="program.plexus" optional="true"/>
+	<import addon="script.module.t0mm0.common" version="1.0.0"/>
+	<import addon="script.module.beautifulsoup" version="3.2.1"/>
+	<import addon="script.module.requests" />
+	<import addon="script.module.youtube.dl" optional="true"/>
+	<import addon="script.common.plugin.cache"/>
+    <import addon="script.module.m3u8" version="0.2.2"/>
+    <import addon="script.module.dateutil" version="2.4.2"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Portal Black Box TV</summary>
+    <description lang="en">[COLOR blue][B]Version Privada Plugin Movie [COLOR white]Ultra [COLOR blue]7K [COLOR white]+.[/B][/COLOR]</description>
+    <disclaimer lang="en">[COLOR red][B]Queda Prohibida La Distribucion De Este Plugin.[/B][/COLOR]</disclaimer>
     <platform>all</platform>
   </extension>
 </addon>
@@ -63,40 +110,94 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.youtube" name="YouTube" version="5.1.16" provider-name="bromix">
-	<requires>
-		<import addon="xbmc.python" version="2.1.0"/>
-	</requires>
-	<extension point="xbmc.python.pluginsource" library="default.py">
-		<provides>video</provides>
+<addon id="plugin.video.tv.ultra.7k" name="[COLOR blue][B]TV [COLOR white]Ultra[COLOR blue] 7K [COLOR white]+[/B][/COLOR]" version="4.0.2" provider-name="Portal Ultra 7K +">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="plugin.video.youtube" optional="true"/>
+	<import addon="plugin.video.SportsDevil" optional="true"/>
+	<import addon="plugin.video.p2p-streams" optional="true"/>
+	<import addon="program.plexus" optional="true"/>
+	<import addon="script.module.t0mm0.common" version="1.0.0" optional="false"/>
+	<import addon="script.module.beautifulsoup" version="3.2.1"/>
+	<import addon="script.module.requests" optional="false"/>
+	<import addon="script.module.youtube.dl" optional="true"/>
+	<import addon="script.common.plugin.cache" optional="false"/>
+    <import addon="script.module.m3u8" version="0.2.2" optional="false"/>
+    <import addon="script.module.dateutil" version="2.4.2" optional="false"/>
+    <import addon="script.module.urlresolver" optional="true"/>
+	<import addon="script.module.mctools" optional="false"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+     <summary lang="en">Portal Ultra 7K +</summary>
+    <description lang="en">[COLOR blue][B]Version Privada Plugin TV Ultra 7K +.[/B][/COLOR]</description>
+    <disclaimer lang="en">[COLOR red][B]Queda Prohibida La Distribucion De Este Plugin.[/B][/COLOR]</disclaimer>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="program.plexus"
+       name="Plexus"
+       version="1.0.0"
+       provider-name="enen92">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+    <import addon="script.module.requests" />
+  </requires>
+  <extension point="xbmc.python.pluginsource"
+            library="default.py">
+        <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.addon.repository" name="Plexus Repository">
+        <info compressed="false">https://plexus.svn.codeplex.com/svn/trunk/Addon/addons.xml</info>
+        <checksum>https://plexus.svn.codeplex.com/svn/trunk/Addon/addons.xml.md5</checksum>
+        <datadir zip="true">https://plexus.svn.codeplex.com/svn/trunk/Addon/</datadir>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary>SopCast and AceStream for Kodi</summary>
+    <description lang="en">Plexus - Any complex structure containing an intricate network of parts. Plexus brings native peer-to-peer support (AceStream and SopCast) for Kodi Entertainment Center for several platforms.[CR][CR]Documentation: (missing)</description>
+    <description lang="pt">Plexus - Uma estrutura complexa constituída por uma rede de partes. O Plexus adiciona suporte peer-to-peer nativo (AceStream e Sopcast) ao Kodi Entertainment Center para várias plataformas.[CR][CR]Documentação: (em falta)</description>
+    <disclaimer lang="en">The author does not host nor distribute any of the content you may watch using this addon. The author has no part in the development of any included technologies. When seeking help in Kodi's forum please respect rules (http://kodi.wiki/view/Forum_rules).</disclaimer>
+    <disclaimer lang="pt">Os autores não alojam nem distribuem nenhum do conteúdo que poderá ser reproduzido a partir deste addon. Os autores não têm qualquer parte no desenvolvimento de qualquer uma das tecnologias. Se procurar ajuda no fórum oficial do Kodi por favor respeite as regras do fórum (http://kodi.wiki/view/Forum_rules).</disclaimer>
+    <forum>http://forum.kodi.tv/showthread.php?tid=201894</forum>
+    <source>https://github.com/enen92/P2P-Streams-Kodi | https://github.com/enen92/P2P-Streams-Kodi--Modules-</source>
+    <website>https://code.google.com/p/p2p-strm/</website>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+<addon id="repository.BassFox-Official" name="BassFox Official Repo" version="1.3.6" provider-name="BassFox">
+	<extension point="xbmc.addon.repository" name="BassFox official Repo">
+		<info compressed="false">https://raw.githubusercontent.com/Jfx666/BiltegiberriaBFX3/master/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/Jfx666/BiltegiberriaBFX3/master/addons.xml.md5</checksum>
+                <datadir zip="true">https://raw.githubusercontent.com/Jfx666/BiltegiberriaBFX3/master</datadir>
 	</extension>
 	<extension point="xbmc.addon.metadata">
-        <summary lang="en">Plugin for YouTube</summary>
-        <description lang="en">YouTube is a one of the biggest video-sharing websites of the world.</description>
-		<summary lang="de">Plugin für YouTube</summary>
-        <description lang="de">YouTube ist ein eines der größten Video-Sharing-Websites der Welt.</description>
-        <summary lang="pl">Wtyczka YouTube</summary>
-        <description lang="pl">YouTube jest jednym z największych na świecie serwisów udostępniania wideo.</description>
-		<summary lang="hu">Kiegészítő  a YouTube-hoz</summary>
-        <description lang="hu">A YouTube a világ egyik legnagyobb videómegosztó weboldala.</description>
-        <summary lang="es">Plugin para YouTube</summary>
-        <description lang="es">YouTube es un uno de los mayores sitios web de intercambio de vídeos del mundo.</description>
-        <summary lang="ru">Видеодополнение YouTube</summary>
-        <description lang="ru">Данное дополнение позволяет находить и смотреть видео на всеми любимом сайте.</description>
-        <summary lang="fr">Plugin pour YouTube</summary>
-        <description lang="fr">YouTube est l'un des plus grands sites de partage vidéos du monde.</description>
-        <summary lang="zh">YouTube附加元件</summary>
-        <description lang="zh">「Youtube」是全世界最大的影片分享網站</description>
-        <summary lang="bg">Добавка за YouTube</summary>
-        <description lang="bg">YouTube е един от най-големите уеб сайтове за споделяне на видео в целия свят.</description>
-		<disclaimer lang="en"></disclaimer>
-		<language></language>
+		<summary>BassFox Official Repository</summary>
+                <description lang="en">Install Addon Official Bass Fox and other add-ons that are complementary help in support links</description>
+   		<description lang="es">Instala el Addon Oficial BassFox y los otros add-ons que son complementos de ayuda en la reproducción de las listas</description>
+		<disclaimer></disclaimer>
 		<platform>all</platform>
-		<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
-		<forum>http://forum.kodi.tv/showthread.php?tid=200735</forum>
-		<website>http://www.youtube.com</website>
-		<email>bromix at gmx dot net</email>
-		<source>https://github.com/bromix/plugin.video.youtube</source>
+	</extension>
+</addon>
+
+<addon id="repository.exodus" version="1.0.0" name="Exodus repository" provider-name="l*m*d*">
+	<extension point="xbmc.addon.repository" name="Exodus repository">
+		<dir>
+			<info compressed="false">https://offshoregit.com/tvaresolvers/tva-common-repository/raw/master/addons.xml</info>
+			<checksum>https://offshoregit.com/tvaresolvers/tva-common-repository/raw/master/addons.xml.md5</checksum>
+			<datadir zip="true">https://offshoregit.com/tvaresolvers/tva-common-repository/raw/master/zips/</datadir>
+		</dir>
+		<info compressed="false">https://offshoregit.com/exodus/addons.xml</info>
+		<checksum>https://offshoregit.com/exodus/addons.xml.md5</checksum>
+		<datadir zip="true">https://offshoregit.com/exodus/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Exodus repository</summary>
+		<description lang="en">Exodus repository</description>
+		<platform>all</platform>
 	</extension>
 </addon>
 
@@ -113,4 +214,154 @@
 		<platform>all</platform>
 	</extension>
 </addon>
+
+<addon
+    id="skin.arctic.zephyr"
+    version="2.2.7"
+    name="Arctic: Zephyr"
+    provider-name="jurialmunkey">
+    <requires>
+        <import addon="xbmc.gui" version="5.10.0"/>
+        <import addon="script.skinshortcuts" version="0.4.0"/>
+        <import addon="service.library.data.provider" version="0.1.0"/>
+        <import addon="script.skin.helper.service" version="0.0.1"/>
+        <import addon="script.extendedinfo" version="3.0.0"/>
+        <import addon="script.globalsearch" version="5.0.0"/>
+        <import addon="script.image.resource.select" version="0.0.5"/>
+        <import addon="script.toolbox" version="1.0.0"/>
+        <import addon="plugin.program.autocompletion" version="1.0.1"/>
+    </requires>
+    <extension
+    point="xbmc.gui.skin"
+    defaultthemename="Textures.xbt"
+    debugging="false"
+    effectslowdown="1">
+        <res width="1920" height="1080" aspect="16:9" default="true" folder="1080i" />
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="de">Klar, minimalistisch, elegant, einfach, leicht</summary>
+        <summary lang="en">Clean, minimal, elegant, simple, light.</summary>
+        <summary lang="en_AU">Clean, minimal, elegant, simple, light.</summary>
+        <summary lang="en_US">Clean, minimal, elegant, simple, light.</summary>
+        <summary lang="es">Limpio, minimalista, elegante, simple, ligero.</summary>
+        <summary lang="fr">Clair, minimaliste, élégant, simple et léger.</summary>
+        <summary lang="fr_CA">Net, minimal, élégant, simple, léger.</summary>
+        <summary lang="lt">Švari, minimali, elegantiška, paprasta, lengva.</summary>
+        <summary lang="nl">Schoon, minimaal, elegant, simpel, licht.</summary>
+        <summary lang="no">Rent, minimalt, elegant, enkelt, lett.</summary>
+        <summary lang="pl">Prosta, minimalista, elegancka i lekka</summary>
+        <summary lang="pt_BR">Limpa, simplista, elegante, leve.</summary>
+        <summary lang="ro">Curat, minimalist, elegant, simplu, ușor</summary>
+        <summary lang="ru">Опрятный, минималистичный, элегантный, простой, светлый.</summary>
+        <description lang="de">Arctic: Zephyr ist die dritte Iteration des Arctic Skins von jurialmunkey und ein minimalistisches, klares und simples Interface für deine Medien mit dem gewissen Etwas.</description>
+        <description lang="en">Arctic: Zephyr is the third iteration of the Arctic skin created by jurialmunkey. Arctic focuses on being simple, clean and minimalistic with a light spin.</description>
+        <description lang="en_AU">Arctic: Zephyr is the third iteration of the Arctic skin created by jurialmunkey. Arctic focuses on being simple, clean and minimalistic with a light spin.</description>
+        <description lang="en_US">Arctic: Zephyr is the third iteration of the Arctic skin created by jurialmunkey. Arctic focuses on being simple, clean and minimalistic with a light spin.</description>
+        <description lang="es">Arctic: Zephyr es la tercera versión de Arctic skin creada por jurialmunkey. La skin Arctic se centra en ser simple, limplia y minimalista con un toque de luminosidad.</description>
+        <description lang="fr">Arctic: Zephyr est la 3ème version du skin Arctic créé par jurialmunkey. Arctic se focalise sur le fait d'être simple, claire et minimaliste.</description>
+        <description lang="fr_CA">Arctique : Zéphyr est la troisième version de l'habillage Arctique créé par jurialmunkey. Arctique se veut être simple, net et minimaliste tout en étant léger. </description>
+        <description lang="lt">Arctic: Zephyr yra trečia Arctic teminės išvaizdos, kurios autorius yra jurialmunkey, iteracija. Arctic sutelkia dėmesį ties paprastumu, švarumu ir minimalizmu su lengvu veikimu.</description>
+        <description lang="nl">Arctic: Zephyr is de derde herhaling van de arctic skin ge creëerd door jurialmunkey. Arctic focust zich op een eenvoudig zeinde, schoon en minimaal met een lichte twist.</description>
+        <description lang="no">Arctic: Zephyr er den tredje iterasjonen av Arctic skallet som ble laget av jurialmunkey. Arctic fokuserer på å være enkel, rent og minimalistisk med et snev av letthet.</description>
+        <description lang="pl">Arctic: Zephyr jest trzecią wersją oryginalnej skóry Arctic stworzonej przez jurialmunkey. Arctic skupia się na prostocie i minimalizmie z lekką dozą szaleństwa.</description>
+        <description lang="pt_BR">Arctic: Zephyr é a terceira iteração da interface Arctic criada por jurialmunkey. Arctic foi criada para ser simples, limpa e minimalistica.</description>
+        <description lang="ru">Arctic: Zephyr это третий виток обложки Arctic, созданной jurialmunkey. Arctic старается быть простой, опрятной и минималистичной.</description>
+        <platform>all</platform>
+        <license>Creative Commons Non Commercial 3.0 License</license>
+        <forum>http://forum.kodi.tv/forumdisplay.php?fid=221</forum>
+        <source>https://github.com/jurialmunkey/skin.arctic.zephyr</source>
+    </extension>
+</addon>
+
+<addon
+    id="skin.eminence.2"
+    version="2.0.3"
+    name="Eminence 2.0"
+    provider-name="jurialmunkey">
+    <requires>
+        <import addon="xbmc.gui" version="5.10.0"/>
+        <import addon="script.skinshortcuts" version="0.6.0"/>
+        <import addon="script.skin.helper.service" version="0.0.1"/>
+        <import addon="script.extendedinfo" version="3.0.0"/>
+        <import addon="script.image.resource.select" version="0.0.5"/>
+        <import addon="plugin.program.autocompletion" version="1.0.1"/>
+    </requires>
+    <extension point="xbmc.gui.skin" defaultthemename="Textures.xbt" effectslowdown="1.00" debugging="false">
+        <res width="1920" height="1080" aspect="16:9" default="true" folder="16x9" />
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary lang="en">Clean, clear, simple, modern.</summary>
+        <disclaimer lang="en">Mouse and Touch device not supported</disclaimer>
+        <description lang="en">Eminence is a skin that aims to be clean, clear, simple and modern.</description>
+    </extension>
+</addon>
+
+<addon id="superrepo.kodi.jarvis.repositories" name="SuperRepo  Repositories [Jarvis][v7]" version="0.7.04" provider-name="Bart Otten">
+                <requires>
+                <import addon="xbmc.addon" version="12.0.0"/>
+                </requires>
+                <extension point="xbmc.addon.repository" name="SuperRepo  Repositories [Jarvis][v7]">
+                <info compressed="false">
+                http://xml.superrepo.org/v7/.xml/jarvis/repositories/superrepo/addons.xml
+                </info>
+                <checksum>
+                http://md5.superrepo.org/v7/.md5/jarvis/repositories/superrepo/addons.xml.md5
+                </checksum>
+                <datadir zip="true">http://redirect.superrepo.org/v7/addons/</datadir>
+                <hashes>true</hashes>
+                </extension>
+                <extension point="xbmc.addon.metadata">
+                <summary>
+                Install add-ons from the SuperRepo  Repositories Repository
+                </summary>
+                <summary lang="nl">
+                Installeer add-ons uit de SuperRepo  Repositories Repository
+                </summary>
+                <summary lang="cz">Inštalácia add-ons zo SuperRepo  Repositories Repozitár</summary>
+                <summary lang="de">
+                Installation von Addons aus dem SuperRepo  Repositories Repository
+                </summary>
+                <summary lang="pt">Instale add-ons do SuperRepo  Repositories Repositório</summary>
+                <summary lang="br">Instale add-ons do SuperRepo  Repositories Repositório</summary>
+                <description>
+                Download and install add-ons for Kodi in the category "SuperRepo" using SuperRepo.[CR][CR]By using SuperRepo repositories you will be able to take advantage of our serverside dependency checking, extensive file mirror service and many more.[CR]Visit our website at https://superrepo.org/ to browse the add-ons, create personal addon bundles and install whole bundles at once![CR][CR]
+                </description>
+                <description lang="nl">
+                Download and installeer add-ons voor Kodi in de categorie "SuperRepo" via SuperRepo.[CR]Door SuperRepo te installeren kunt u profiteren van onze controle van add-ons en ons uitgebreide server netwerk. Bezoek onze website op https://superrepo.org om door de add-ons te bladeren, persoonlijke add-on bundels te maken en complete bundels in 1 keer te installeren![CR][CR]
+                </description>
+                <description lang="cz">
+                Preber a inštaluj add-ons do kategórie "SuperRepo" z SuperRepo.org add-on repozitár.[CR][CR]Ak si našiel add-on ktorý je poškodený alebo nefunkčný, alebo chceš pridať nový add-on, potom prosím pozri na https://superrepo.org/[CR][CR]Repozitár je udržiavaný komunitou Kodi a za pomoci SuperRepo Wiki, a tento preberá add-ons z rôznych zdrojov. Vzhľadom na to, SuperRepo nenesie žiadnu zodpovednosť za služby poskytované týmito add-ons.[CR][CR]Rozšírený repozitár vyvinul Bart Otten[CR][CR]
+                </description>
+                <description lang="de">
+                Lade und installiere Addons der Kategorie "SuperRepo" aus dem SuperRepo.org Addon Repository.[CR][CR]Möchtest du ein fehlerhaftes Addon melden oder ein neues Addon vorschlagen, kannst du dies über unsere Webseite http://superrepo.org tun.[CR][CR]Das Repository wird mit Hilfe des SuperRepo Wiki durch die Kodi Community gepflegt und durch unseren Generator aus mehreren Quellen zusammengestellt. Daher übernimmt SuperRepo keinerlei Verantwortung für diesen Service.[CR][CR]Der"eXtended Reposity Generator" wird durch Bart Otten entwickelt.[CR][CR]
+                </description>
+                <description lang="pt">
+                Baixe e instale o add-ons na categoria "SuperRepo" do Repositório SuperRepo.org. [CR] [CR] Se você encontrar um add-on quebrado ou não funcionando, ou você gostaria de incluir um outro, por favor visite https://superrepo.org/ [CR] [CR]O repositório é mantida pela comunidade do Kodi usando o Wiki do SuperRepo e o nosso gerador de busca de add-ons múltiplas fontes. Portanto SuperRepo não aceita qualquer responsabilidade por esse serviço.[CR][CR]O Gerador Reposity eXtended é desenvolvido por Bart Otten[CR][CR]
+                </description>
+                <description lang="br">
+                Baixe e instale o add-ons na categoria "SuperRepo" do Repositório SuperRepo.org. [CR] [CR] Se você encontrar um add-on quebrado ou não funcionando, ou você gostaria de incluir um outro, por favor visite https://superrepo.org/ [CR][CR]O repositório é mantida pela comunidade do Kodi usando o Wiki do SuperRepo e o nosso gerador de busca de add-ons múltiplas fontes. Portanto SuperRepo não aceita qualquer responsabilidade por esse serviço.[CR][CR]O Gerador Reposity eXtended é desenvolvido por Bart Otten[CR][CR]
+                </description>
+                <disclaimer>
+                The SuperRepo generator fetches addons from multiple sources. Therefore SuperRepo accepts no responsibility for included addons.[CR]
+                </disclaimer>
+                <disclaimer lang="nl">
+                De SuperRepo generator verzamelt addons van verschillende bronnen. Daarom accepteert SuperRepo geen enkele verantwoordelijkheid voor de ingevoegde addons.[CR]
+                </disclaimer>
+                <disclaimer lang="cz">
+                Repozitár je udržiavaný komunitou Kodi a za pomoci SuperRepo Wiki, a tento preberá addons z rôznych zdrojov. Vzhľadom na to, SuperRepo nenesie žiadnu zodpovednosť za služby poskytované týmito addons.[CR]
+                </disclaimer>
+                <disclaimer lang="de">
+                Das Repository wird durch die Kodi Community gepflegt und durch unseren Generator aus mehreren Quellen zusammengestellt. Daher übernimmt SuperRepo keinerlei Verantwortung für die enthaltenen Addons.[CR]
+                </disclaimer>
+                <disclaimer lang="pt">
+                O repositório é mantido pela comunidade comunidade do Kodi e o nosso gerador de busca de addons de múltiplas fontes. Portanto SuperRepo aceita não se responsabiliza por addons incluídos.[CR]
+                </disclaimer>
+                <disclaimer lang="br">
+                O repositório é mantido pela comunidade comunidade do Kodi e o nosso gerador de busca de addons de múltiplas fontes. Portanto SuperRepo aceita não se responsabiliza por addons incluídos.[CR]
+                </disclaimer>
+                <platform>all</platform>
+                <website>https://superrepo.org/</website>
+                </extension>
+                </addon>
 </addons>

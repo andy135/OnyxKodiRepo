@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.tv.ultra.7k" name="[COLOR blue][B]TV [COLOR white]Ultra[COLOR blue] 7K [COLOR white]+[/B][/COLOR]" version="4.0.2" provider-name="Portal Ultra 7K +">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="plugin.video.youtube" optional="true"/>		
+	<import addon="plugin.video.SportsDevil" optional="true"/>
+	<import addon="plugin.video.p2p-streams" optional="true"/>
+	<import addon="program.plexus" optional="true"/>	
+	<import addon="script.module.t0mm0.common" version="1.0.0" optional="false"/>
+	<import addon="script.module.beautifulsoup" version="3.2.1"/>
+	<import addon="script.module.requests" optional="false"/> 
+	<import addon="script.module.youtube.dl" optional="true"/>    
+	<import addon="script.common.plugin.cache" optional="false"/>	
+    <import addon="script.module.m3u8" version="0.2.2" optional="false"/>
+    <import addon="script.module.dateutil" version="2.4.2" optional="false"/>
+    <import addon="script.module.urlresolver" optional="true"/>    
+	<import addon="script.module.mctools" optional="false"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+     <summary lang="en">Portal Ultra 7K +</summary>
+    <description lang="en">[COLOR blue][B]Version Privada Plugin TV Ultra 7K +.[/B][/COLOR]</description>
+    <disclaimer lang="en">[COLOR red][B]Queda Prohibida La Distribucion De Este Plugin.[/B][/COLOR]</disclaimer>
+    <platform>all</platform>
+  </extension>
+</addon>

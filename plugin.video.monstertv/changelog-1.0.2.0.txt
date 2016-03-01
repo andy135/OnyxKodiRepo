@@ -1,0 +1,147 @@
+PLD.VisionTV 0.1beta
+
+- Versión inicial
+- Muchísimos errores ;)
+
+
+
+PLD.VisionTV 0.2beta
+
+- Corregido error que impedía arrancar en Android
+- Se pueden lanzar los enlaces Acestreams (gracias a P2P-Streams, de enen92)
+- Añadido soporte de listas categorizadas de canales
+- Corregidos muchos errores
+
+
+
+PLD.VisionTV 0.2.5
+
+- Soporte de listas M3U de SimpleTV
+- Nueva biblioteca de listas M3U.- Añadido enlace al tutorial para torpes en Youtube ;)
+- Agregada sección de listas M3U para descargar
+- Nuevas "multilistas": XBMCyMás, SPlive, Listas MashUp
+- Nuevas listas XML: Gurb, White Noise, José Rodriguez, etc. (gracias a todos por compartir!)
+
+
+
+PLD.VisionTV 0.2.6
+
+- Añadido buscador de canales en las listas M3U
+- Ahora se descargan las listas y se abren automáticamente
+- Corregidos muchos bugs y mejorado el parseado de listas
+
+
+
+PLD.VisionTV 0.2.61
+
+- Se corrige un bug crítico por el que muchos canales rtmp no se reproducen
+
+
+
+PLD.VisionTV 0.2.7
+
+- Mejorado el comportamiento del buscador (por el momento, sólo las listas M3U descargadas)
+- Agregada agenda de programación TV con eventos de fútbol de la TV de España, Italia y Reino Unido
+  (Cada evento de la agenda se sincroniza con el buscador de canales)
+- Agregado soporte de listas PLX, con biblioteca online de descarga de listas y varias listas actualizables
+- Nuevos logos y diseño en general
+
+
+
+PLD.VisionTV 0.2.8
+
+- Agregada la agenda de programación de fútbolenlaTV.com
+- Búsquedas en la agenda cuando hay varios canales de emisión
+- Soporte de nuevas listas P2P (Acestreams, Sopcast y Torrents)
+- El buscador es funcional en listas M3U, PLX y P2P
+- Corregida la lectura de la lista XML "The Blacklist"
+- Se ha agregado la lista de origen de un canal a los resultados de la búsqueda
+- Las listas se guardan con su extensión correspondiente (*.M3U, *.PLX, *.P2P)
+
+
+
+PLD.VisionTV 0.2.85
+
+- Soporte de canales de Movistar TV (utilizando la conexión del abonado)
+- Soporte de thumbnails, fanarts y comentarios en las listas P2P, tanto por defecto en la lista como para cada entrada
+
+
+
+PLD.VisionTV 0.2.86
+
+- Soporte de listas JSN
+- Corregido error por el cuál las listas se descargaban erróneamente en "Mis listas" por el formato entre corchetes (negrita, color, cursiva)
+
+
+
+PLD.VisionTV 0.2.9
+
+- Conectores de Allmyvideos, Streamcloud, Played.to y Vidspot
+- Soporte de enlaces cortos de más de 340 servicios de acortadores de enlaces
+- Soporte de vídeos y canales de usuarios de Youtube
+- Mejorado el parseo de listas JSN y PLX y mejorado el formato de presentación de listas y canales
+- La carpeta "mis listas" pasa a ubicarse en XBMC/addons para evitar que se borren las listas al actualizar el addon
+- Añadido control parental sobre las listas de adultos
+- Añadidas nuevas listas de películas, documentales y deportes
+- Varios bugs menores corregidos
+
+
+
+PLD.VisionTV 0.3.01 --> 0.3.05 
+
+- Corrección de bugs
+
+
+
+PLD.VisionTV 0.3.1
+
+- Regex de series: Soporte de seriesyonkis, seriesblanco, seriesmu, seriesflv y seriesadicto
+- Implementados nuevos enlaces #multilinks y #multiparsers en listas M3U
+- Conectores multimedia: Añadidos Novamov, Gamovideo, Moevideos, Movshare, Powvideo, VeeHD, Tumi y Videobam
+- Corregidores conectores Vk, Streamin.to, Allmyvideos y Vidspot
+- Se corrige limitación del API de Youtube: Ahora se muestran hasta 200 vídeos por lista de reproducción
+- Soporte de EPG por módulos (Miguía.tv y Fórmulatv.com) e integración del EPG en multilinks
+- Nuevas opciones de configuración: EPG, Modos de vista, listas online, lanzador de torrents y magnets, etc.
+- Opción de elegir KMediaTorrent, Pulsar o Stream como reproductor de Torrents y Magnet links
+- Buscador Unificado de Magnets (BUM+) que devuelve resultados de motores de búsqueda de torrents: Kickass, Isohunt, BitSnoop, Monova
+- Soporte de listas M3U musicales de Goear
+- Añadido scraper de películas: Permite captura automática de metadatos de películas de IMDB y themoviedb.org
+- Lector de álbumes de imágenes (archivos CBR/CBZ)
+- Añadidos varios web parsers de programación TV
+
+
+
+PLD.VisionTV 0.3.2
+
+- Mejorada la velocidad de carga del EPG modular de FórmulaTV, corrigiendo varios canales que no mostraban la programación y corrigiendo bugs de hora actual y de eventos futuros.
+- Implementado en listas M3U lector de textos con soporte de textos online. 
+- Infopanel EPG-TXT: Al seleccionar canal se muestra agenda TV en panel lateral derecho.
+- Corregidos los regex de vaughnlive y castalba (*)
+- Añadidos regex de broadcastlive, miplayer.net, ezcast, rdmcast y businessapp1 (este último presenta problemas en algunas páginas debido a continuos cambios en el código web) 
+- Se implementa en las listas M3U tanto llamadas a SportsDevil (**) como a canales y listas de reproducción de Youtube.Se añade en el XML de configuración requisitos de instalación de Youtube y SportsDevil, de forma que si no están instalados Kodi Helix 14.2 los autoinstala previo consentimiento del usuario. ¡OJO! He cambiado las rutas de playlists y tmp a las carpetas Kodi/userdata/playlists y Kodi/userdata/playlists/tmp.
+- Arreglado bug en los parámetros logo y background globales de una lista M3U
+- Mejorada la compatibilidad de los conectores multimedia: streamin.to, allmyvideos y vidspot.
+- Corregidos los regex de SeriesFLV y SeriesBlanco: Se filtra por servidores soportados por PLD.VisionTV
+- Corregido bug en multilinks y multiparsers; no se mostraba el sector al activar/desactivar el EPG
+- Mejorado el comportamiento de #multilinks: Se elimina limitación de 12 ítems, se corrige error al utilizar etiquetas de formato ([COLOR]...[/COLOR], [B]...[/B], [I]...[/I], etc. ¡Ojo! Sigue siendo incompatible el parámetro “group-title” porque modifica el título del canal. Se añade también a los multilinks los nuevos tipos de enlaces: TXT, SportsDevil, canales y listas de reproducción de Youtube, etc.
+
+
+
+PLD.VisionTV 0.3.3
+
+Nuevos regex de películas para listas M3U: Oranline, Pelisadicto, Pordede
+Nuevos conectores multimedia Veetle, Videoweed, Rocvideo, Streamable, Realvid, Netu, Videomega.tv, Flashx y Video.tt integrados en todos los regex de series y películas, y tanto en enlaces simples como multilinks.
+Rediseñada sección AgendaTV: Ahora se puede incluir en una lista M3U para que se muestreen el panel lateral tanto la agenda de deportes (futbolenlatele, futbolenlatv), como la sección “¿Qué ver ahora?”, así como la programación completa de un canal (EPG-TXT) 
+Nuevo sistema de filtros de listas M3U para multiparsers: por título, género, año, director, reparto y puntuación mínima (con decimales)
+Se han añadido varias opciones de configuración de filtros: Modo de vista, qué etiquetas de metadatos mostrar y el color tanto de títulos y etiquetas.
+El scraper de películas ahora captura también el reparto principal y permite leer archivos NFO exportados de la biblioteca de Kodi. (Pendiente de configurar carpeta de archivos NFO)
+Se ha implementado en las listas M3U llamada a otros addons (plugin://)
+Se ha añadido filtro de título para enlaces Sopcast y Acestream
+Se ha añadido opción en la configuración para ejecutar archivos Acestream/Sopcast con p2p-streams o Plexus
+Añadido menú contextual para listas de filtros de películas con dos herramientas: Trailers (requiere addon de Youtube) y Wikipeli (se muestra en el panel lateral la ficha técnica de Filmaffinity; información técnica, sinopsis y críticas destacadas).
+Se recupera la herramienta BUM+ en #multiparsers, con soporte de Kickass, BitSnoop, IsoHunt y LimeTorrents
+Implementado parser de LiveSoccerTV.com con la lista mundial de canales con derechos de retransmisión y estadísticas en vivo.
+
+
+
+
