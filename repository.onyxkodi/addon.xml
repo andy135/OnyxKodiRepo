@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.onyxkodi" name="Onyx Kodi Repo" version="1.0.0" provider-name="Monster">
+	<extension point="xbmc.addon.repository" name="Kodi-Mexico official Repo">
+		<info compressed="false">https://raw.githubusercontent.com/andy135/OnyxKodiRepo/master/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/andy135/OnyxKodiRepo/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/andy135/OnyxKodiRepo/master</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Onyx Kodi Repo</summary>
+   		<description lang="en">Instala los Addons de Monster Build.</description>
+		<disclaimer></disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+
+
