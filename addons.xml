@@ -26,7 +26,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.monstertv" name="[COLOR purple]MonsterTV[/COLOR]" version="1.0.2.0" provider-name="Juarrox">
+<addon id="plugin.video.monstertv" name="[COLOR purple]MonsterTV[/COLOR]" version="1.0.2.1" provider-name="Juarrox">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
 	<import addon="plugin.video.youtube" optional="true"/>
