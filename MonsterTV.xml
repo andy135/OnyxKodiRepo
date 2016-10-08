@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<main_menu>
+    <menu_info>
+		<title>[COLOR ff00ee99][B]| - - - - -  MonsterTV  - - - - - |[/B][/COLOR]</title>
+		<thumbnail>https://dl.dropboxusercontent.com/s/s3y5zyfhwwbvtzl/icon.png</thumbnail>
+		<fanart>https://dl.dropboxusercontent.com//s/mg28o5nfibd6q11/fanart.jpg</fanart>
+		<date></date>
+		<credits>MonsterTV</credits>
+    </menu_info>
+
+ 	<channel>
+		<name>[B][COLOR yellow]TV[/COLOR] - [COLOR ff00cc99]PROGRAMACIÓN[/COLOR][/B]</name>
+		<thumbnail>http://especiales.lainformacion.com/noticias-semana/img/progtvinf.jpg</thumbnail>
+		<fanart>https://dl.dropboxusercontent.com//s/mg28o5nfibd6q11/fanart.jpg</fanart>
+		<action>getfile_http</action>
+		<url>https://dl.dropbox.com/s/olz0rzm14e6zz2l/epg%20digital.m3u</url>
+	</channel>
+
+
+	<channel>
+		<name>[B][COLOR yellow]TV[/COLOR] - [COLOR ff00cc99]MOVISTAR +[/COLOR][/B]</name>
+		<thumbnail>https://pbs.twimg.com/profile_images/760031315114725376/IQnppOaZ.jpg</thumbnail>
+		<fanart>http://www.adslzone.net/app/uploads/2015/07/apertura-movistar-plus.jpg</fanart>
+		<action>getfile_http</action>
+		<url>https://dl.dropbox.com/s/r35482imrpjpw8i/digital%2B.m3u</url>
+	</channel>
+
+	<channel>
+		<name>[B][COLOR yellow]TV[/COLOR] - [COLOR ff00cc99]MOVISTAR + BY TORETE[/COLOR][/B]</name>
+		<thumbnail>https://pbs.twimg.com/profile_images/760031315114725376/IQnppOaZ.jpg</thumbnail>
+		<fanart>http://www.adslzone.net/app/uploads/2015/07/apertura-movistar-plus.jpg</fanart>
+		<action>getfile_http</action>
+		<url>https://dl.dropbox.com/s/wrjbn5jiqx5ma3p/Nuevo%20documento%20de%20texto%20%284%29.m3u</url>
+	</channel>
+
+	<channel>
+		<name>[B][COLOR yellow]TV[/COLOR] - [COLOR ff00cc99]DEPORTES[/COLOR][/B]</name>
+		<thumbnail>http://soy.impresionesaerea.netdna-cdn.com/images/oportunidaNegocio/giros_negocio/se_giros_deportes_980x250.jpg</thumbnail>
+		<fanart>http://en.fonditos.com/includes/imagen.php?ruta=/wallpapers/1152x864/08940.jpg&nombre=balon_de_fuego-1152x864.jpg</fanart>
+		<action>getfile_http</action>
+		<url>https://dl.dropbox.com/s/v6ki9clzccrevbp/deportes.m3u</url>
+	</channel>
+
+	<channel>
+		<name>[B][COLOR yellow]TV[/COLOR] - [COLOR ff00cc99]DEPORTES HD[/COLOR][/B]</name>
+		<thumbnail>http://arenavisiononline.com/Home/images/header.png</thumbnail>
+		<thumbnail>https://pbs.twimg.com/profile_images/1851363673/logo.jpg</thumbnail>
+		<fanart>http://www.sportyou.es/blog/wp-content/uploads/2016/09/Neymar-Benzema-Cristiano.jpg</fanart>
+		<action>tumarcador0</action> 
+	</channel>
+	
+	<channel>
+		<name>[B][COLOR yellow]TV[/COLOR] - [COLOR ff00cc99]DOCUMENTALES[/COLOR][/B]</name>
+		<thumbnail>http://documentalesmaniac.com/img/logo.jpg</thumbnail>
+		<fanart>http://i.ytimg.com/vi/0xrjvj6ZPyA/maxresdefault.jpg</fanart>
+		<action>getfile_http</action>
+		<url>https://dl.dropbox.com/s/w79ydldyw7fbldj/documentales.m3u</url>
+	</channel>
+
+	<channel>
+		<name>[B][COLOR yellow]TV[/COLOR] - [COLOR ff00cc99]TDT[/COLOR][/B]</name>
+		<thumbnail>http://2.bp.blogspot.com/_62i_Jb9DTsU/TUrMCbXkGiI/AAAAAAAABsI/aGohg22yCg8/s1600/tdt.jpg</thumbnail>
+		<fanart>http://images.elconfidencialdigital.com/medios/Television-Digital-Terrestre_ECDIMA20140814_0005_16.jpg</fanart>
+		<action>getfile_http</action>
+		<url>https://dl.dropbox.com/s/eifudz8781i3taq/tdt.m3u</url>
+	</channel>
+	
+	<channel>
+	   <name>[B][COLOR yellow]TV[/COLOR] - [COLOR red][B]ADULTOS[/COLOR][/B]</name>
+		<thumbnail>http://wwwhatsnew.com/wp-content/uploads/2015/02/captura95-600x344.jpg</thumbnail>
+		<fanart>http://www.campeche.com.mx/wp-content/uploads/2011/12/sexo.jpg</fanart>
+		<action>getfile_http</action>
+		<url>https://dl.dropbox.com/s/plm6s7azkdhphpl/adultos.m3u</url>
+	</channel>
+	
+	<channel>
+		<name>[COLOR ff00cc99][B]SERIES ONLINE[/B][/COLOR]</name>
+		<thumbnail>http://www.topandroide.com/static/sertv.png</thumbnail>
+		<fanart>https://www.le-vpn.com/fr/wp-content/uploads/2015/07/series-US.jpg</fanart>
+		<action>getfile_http</action>
+		<url>https://dl.dropbox.com/s/gk30x2wwjuwef8o/sreies%20online.m3u</url>
+	</channel>
+
+	<channel>
+		<name>[B][COLOR blue]VIDEOCLUB[/COLOR] [COLOR ff00cc99]TOTAL[/COLOR][/B]</name>
+		<thumbnail>http://1.bp.blogspot.com/-qrtFTbg5CDM/TV25GQgwNoI/AAAAAAAAADo/KYA4ohpQtdc/s1600/logo%2Bnegocio%2Bcon%2Bpochoclo.JPG</thumbnail>
+		<fanart>http://cinemania.es/img/conts/97832cdfad4b.jpg</fanart>
+		<action>getfile_http</action>
+		<url>https://dl.dropbox.com/s/vpvejak9nh9dxjq/VIDEOCLUB%20BY%20MICHAEL%20ESPELT.m3u</url>
+	</channel>
+
+	<channel>
+		<name>[B][COLOR blue]VIDEOCLUB[/COLOR] [COLOR ff00cc99]ESTRENOS[/COLOR][/B]</name>
+		<thumbnail>http://stilo.es/cine/wp-content/uploads/2007/12/videoclub-1.jpg</thumbnail>
+		<fanart>http://cinemania.es/img/conts/97832cdfad4b.jpg</fanart>
+		<action>getfile_http</action>
+		<url>https://dl.dropbox.com/s/zim05i1xzwlrkax/zona%20pelis.m3u</url>
+	</channel>
+	
+	<channel>
+		<name>[B][COLOR blue]VIDEOCLUB[/COLOR][COLOR ff00cc99] V.O[/B][/COLOR]       </name>
+		<thumbnail>http://stilo.es/cine/wp-content/uploads/2007/12/videoclub-1.jpg</thumbnail>
+		<fanart>http://s1.hipertextual.com/wp-content/blogs.dir/4/files/2013/08/Cine-Mosaic-Principal-800x360.jpg</fanart>
+		<action>getfile_http</action>
+		<url>https://dl.dropbox.com/s/sxqooft6qsrj050/zona%20pelis%20vo.m3u</url>
+	</channel>
+	
+	<channel>		
+		<name>[B][COLOR blue]VIDEOCLUB[/COLOR][COLOR ff00cc99] SAGAS[/B][/COLOR]       </name>
+		<thumbnail>http://s2.subirimagenes.com/otros/5084230bannersagas1.jpg</thumbnail>
+		<fanart>http://img267.imageshack.us/img267/5317/cine2010.jpg</fanart>
+		<action>getfile_http</action>
+		<url>https://dl.dropbox.com/s/pg38kfyg5xx1nmq/zagas%20pelis.m3u</url>
+	</channel>
+
+	<channel>	
+		<name>[B][COLOR blue]VIDEOCLUB[/COLOR][COLOR ff00cc99] POR GENERO BY JUAN GARCIA[/B][/COLOR]</name>
+		<thumbnail>http://stilo.es/cine/wp-content/uploads/2007/12/videoclub-1.jpg</thumbnail>
+		<fanart>http://cinemania.es/img/conts/97832cdfad4b.jpg</fanart>
+		<action>getfile_http</action>
+		<url>https://dl.dropbox.com/s/0tiqkfsb9xmab9b/juan%20garcia.m3u</url>
+	</channel>
+
+	<channel>
+		<name>[B][COLOR blue]VIDEOCLUB[/COLOR][COLOR ff00cc99] BY EDUMON[/B][/COLOR]</name>
+		<thumbnail>http://1.bp.blogspot.com/-qrtFTbg5CDM/TV25GQgwNoI/AAAAAAAAADo/KYA4ohpQtdc/s1600/logo%2Bnegocio%2Bcon%2Bpochoclo.JPG</thumbnail>
+		<fanart>http://cinemania.es/img/conts/97832cdfad4b.jpg</fanart>
+		<action>getfile_http</action>
+		<url>https://dl.dropbox.com/s/kok7dl7r5zfw434/EDUMON.m3u</url>
+	</channel>
+
+	<channel>
+		<name>[B][COLOR blue]VIDEOCLUB[/COLOR][COLOR ff00cc99] CICLO DE ACTOR BY JUAN GARCIA [/B][/COLOR]</name>
+		<thumbnail>http://stilo.es/cine/wp-content/uploads/2007/12/videoclub-1.jpg</thumbnail>
+		<fanart>http://cinemania.es/img/conts/97832cdfad4b.jpg</fanart>
+		<action>getfile_http</action>
+		<url>https://dl.dropbox.com/s/rlg4as7yjyrtbtj/actores.m3u</url>
+	</channel>
+	
+	<channel>
+		<name>[B][COLOR blue]VIDEOCLUB[/COLOR][COLOR ff00cc99] EN ORDEN ALFABETICO[/B][/COLOR]       </name>
+		<thumbnail>http://stilo.es/cine/wp-content/uploads/2007/12/videoclub-1.jpg</thumbnail>
+		<fanart>http://cinemania.es/img/conts/97832cdfad4b.jpg</fanart>
+		<action>getfile_http</action>
+		<url>https://dl.dropbox.com/s/43l10xnj898tmxf/PELIS%20ALFABETICO.m3u</url>
+	</channel>
+
+	<channel>
+		<name>[B][COLOR blue]VIDEOCLUB[/COLOR][COLOR ff00cc99] INFANTIL[/B][/COLOR]       </name>
+		<thumbnail>http://www.pequeocio.com/wp-content/uploads/2012/10/peliculas-princesas-600x600.jpg</thumbnail>
+		<fanart>http://2.bp.blogspot.com/-P8vz6R4Weow/T_871i2dhHI/AAAAAAAABCw/LoTHLyyE7B0/s1600/Descargar+Megapost-+Peliculas+Infantiles+Espa%C3%B1ol+Latino.png</fanart>
+		<action>getfile_http</action>
+		<url>https://dl.dropbox.com/s/p7m5nt0rutr23ss/zona%20infantil.m3u</url>
+	</channel>
+
+	<channel>
+		<name>[COLOR ff00cc99][B]LISTA DE AMIGOS[/B][/COLOR]       </name>
+		<thumbnail>http://static.tumblr.com/u8ppn3h/cFXlghzf5/amigos.gif</thumbnail>
+		<fanart>http://www.toquedeluz.es/blogtoquedeluz/wp-content/uploads/2015/02/beneficios-amigos.jpg</fanart>
+		<action>getfile_http</action>
+		<url>https://dl.dropbox.com/s/clk0cvcz2mw7anl/amigos.m3u</url>
+	</channel>
+	
+	<channel>
+		<name>[COLOR ff00cc99][B]CURSOS PROGRAMACION Y PC YOUTUBE[/B][/COLOR]       </name>
+		<thumbnail>http://dynimg-mx.v2bcdn.com/product/393_es_c__61.jpg</thumbnail>
+		<fanart>http://cdn5.rootear.com/wp-content/blogs.dir/35/files/2015/05/cursos-programacin-udemy-700x500.jpg</fanart>
+		<action>getfile_http</action>
+		<url>https://dl.dropbox.com/s/chsn5u7k275op60/cursos.m3u</url>
+	</channel>
+
+</main_menu>
