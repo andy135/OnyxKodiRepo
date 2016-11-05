@@ -47,7 +47,7 @@ url = "http://tumarcador.xyz"
 
 guia = "https://www.cubbyusercontent.com/pl/Guia_Marcador.txt/_4eb6780a4edc43c7879f6140c019b236"
 
-fich_hora = xbmc.translatePath(os.path.join('special://userdata/addon_data/plugin.video.palcotv/horario_tumarcador.txt'))
+fich_hora = xbmc.translatePath(os.path.join('special://userdata/addon_data/plugin.video.monstertv/horario_tumarcador.txt'))
 def tumarcador0(params):
 	###################################################################### DMO ######################################################################
 	mi_version = ["2016","10","31"]  # OJO!! Cambiar la Version, por supuesto... AQUI Y EN EL FICHERO DE LA NUBE
