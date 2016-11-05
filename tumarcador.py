@@ -35,7 +35,7 @@ addonPath           = xbmcaddon.Addon().getAddonInfo("path")
 
 
 
-parser="[COLOR skyblue][B]TuMarcador  [COLOR orange]Alegre  [COLOR skyblue]v0.0.7[/B][/COLOR]"
+parser="[COLOR skyblue][B]TuMarcador  [COLOR orange]Alegre  [COLOR skyblue]v0.0.8[/B][/COLOR]"
 autor="[COLOR yellow][B][I]      **** by DarioMO ****[/I][/B][/COLOR]"
 url_ref = "http://tumarcador.xyz/"
 #url_montada = 'plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url=MI_CANAL%26referer='+url_ref
@@ -47,10 +47,10 @@ url = "http://tumarcador.xyz"
 
 guia = "https://www.cubbyusercontent.com/pl/Guia_Marcador.txt/_4eb6780a4edc43c7879f6140c019b236"
 
-fich_hora = xbmc.translatePath(os.path.join('special://userdata/playlists/horario.txt'))
+fich_hora = xbmc.translatePath(os.path.join('special://userdata/addon_data/plugin.video.palcotv/horario_tumarcador.txt'))
 def tumarcador0(params):
 	###################################################################### DMO ######################################################################
-	mi_version = ["2016","10","15"]  # OJO!! Cambiar la Version, por supuesto... AQUI Y EN EL FICHERO DE LA NUBE
+	mi_version = ["2016","10","31"]  # OJO!! Cambiar la Version, por supuesto... AQUI Y EN EL FICHERO DE LA NUBE
 
 	r = requests.get("http://pastebin.com/raw/2baqp6N8")
 
@@ -124,7 +124,8 @@ def tumarcador0(params):
 			hora = plugintools.find_single_match(linea,'<hora>(.*?)<')
 			competicion = plugintools.find_single_match(linea,'<competi>(.*?)<')
 			partido = plugintools.find_single_match(linea,'<partido>(.*?)<')
-			canal = plugintools.find_single_match(linea,'<canal>(.*?)<')
+			canal = ">" +  plugintools.find_single_match(linea,'<canal>(.*?)<') + "<"
+			
 			logo_ext = plugintools.find_single_match(linea,'<logo>(.*?)<')
 
 			if len(hora) > 0:
@@ -143,8 +144,9 @@ def tumarcador0(params):
 				dif_minuto=int(lista_dif[1])
 				dif_segundo=int(lista_dif[2])
 
-				formato = "%d-%m-%Y%H:%M:%S"
-				h1 = datetime.strptime("12-12-2012"+hora_esp, formato)
+				h1 = datetime(2012, 12, 12, esp_hora, esp_minuto, 0)
+				
+					
 				dh = timedelta(hours=dif_hora) 
 				dm = timedelta(minutes=dif_minuto)          
 				ds = timedelta(seconds=dif_segundo)
@@ -163,31 +165,75 @@ def tumarcador0(params):
 				hora="[COLOR lightblue]" + resultado.strftime("%H:%M:%S") + "h[/COLOR]"
 				hora = hora.replace(":00h","h")
 				#***********  Control de Diferencias Horarias DarioMO 15-10-16  *******************
- 
-			if len(canal) > 1:
+			
+			#if len(canal) > 1:
+			canal2 = canal.replace(">" , "").replace("<" , "").replace("-Acestream" , "a-Acestream")
+			if len(canal) > 3:  # Hay mas de 1 canal y seguramente acestream 31-10-16
 				letrero = "Canales: "
+				completa = hora + "   [COLOR white](" + competicion + ") - [/COLOR]" + partido + "    [COLOR white][I][ "+letrero+canal2+" ] [/COLOR][/I]"
+				if len(logo_ext) > 0:
+					logo = logo_ext
+
+				plugintools.add_item(action="tumarcador_canales",url=canal,title=completa,thumbnail=logo, fanart=fondo, folder=True, isPlayable=False)
+				
 			else:
 				letrero = "Canal: "
 			
-			canal_regex = canal
-			'''
-			if canal == "1":
-				canal_regex = "x"
-			if canal == "2":
-				canal_regex = "y"
-			'''
-			el_canal = "http://tumarcador.xyz/canal" + canal_regex + ".php"
-				
-			completa = hora + "   [COLOR white](" + competicion + ") - [/COLOR]" + partido + "    [COLOR white][I]["+letrero+canal+"] [/COLOR][/I]"
-			lanzo_spd = url_montada.replace("MI_CANAL", el_canal)
-			if len(logo_ext) > 0:
-				logo = logo_ext
+				canal_regex = canal2
 
-			plugintools.runAddon(action="runPlugin",url=lanzo_spd,title=completa,thumbnail=logo, fanart=fondo, folder=False, isPlayable=True)
+				el_canal = "http://tumarcador.xyz/canal" + canal_regex + ".php"
+					
+				completa = hora + "   [COLOR white](" + competicion + ") - [/COLOR]" + partido + "    [COLOR white][I][ "+letrero+canal2+" ] [/COLOR][/I]"
+				lanzo_spd = url_montada.replace("MI_CANAL", el_canal)
+				if len(logo_ext) > 0:
+					logo = logo_ext
+
+				plugintools.runAddon(action="runPlugin",url=lanzo_spd,title=completa,thumbnail=logo, fanart=fondo, folder=False, isPlayable=True)
 		
 				
 	return
 	
+
+
+
+def tumarcador_canales(params):  # 31-10-16
+	titulo = params.get("title")
+	canal = params.get("url")
+	fondo = params.get("fanart")
+	logo = params.get("thumbnail")
+
+	## >5 y [COLOR red]5-Acestream[/COLOR]<fin
+	canal_normal = plugintools.find_single_match(canal,'>(.*?) y')
+	canal_aces = plugintools.find_single_match(canal,'red](.*?)-')
+	pagina_aces = "http://tumarcador.xyz/canal" +  canal_aces + "a.php"
+
+	plugintools.add_item(action="",url="",title=titulo,thumbnail=logo,fanart=fondo,folder=False,isPlayable=False)
+	plugintools.add_item(action="",url="",title="",thumbnail=logo, fanart=fondo, folder=False, isPlayable=False)
+
+	r=requests.get(pagina_aces)
+	data = r.content
+	
+	#Busco los 2 enlaces aces... el m3u8 y el acestream
+	m3u8 = plugintools.find_single_match(data,'file: "(.*?)"')
+	aces = "acestream://" + plugintools.find_single_match(data,'acestream://(.*?)"')
+
+	el_canal = "http://tumarcador.xyz/canal" + canal_normal + ".php"
+	lanzo_spd = url_montada.replace("MI_CANAL", el_canal)
+	
+	url_montada2 = 'plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url='+m3u8+'%26referer=http://tumarcador.xyz/'
+	url_montada3 = 'plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url='+aces+'%26referer=http://tumarcador.xyz/'
+	
+	plugintools.runAddon(action="runPlugin",url=lanzo_spd,title="[COLOR white]-Ver en Canal "+canal_normal+"[/COLOR]",thumbnail=logo, fanart=fondo, folder=False, isPlayable=True)
+	plugintools.add_item(action="runPlugin",url=url_montada3,title="[COLOR red]-Ver en Canal "+canal_aces+"a   Formato Acestream[/COLOR]",thumbnail=logo,fanart=fanart,folder=False,isPlayable=True)
+	plugintools.add_item(action="runPlugin",url=url_montada2,title="[COLOR blue]-Ver en Canal "+canal_aces+"a   Formato m3u8[/COLOR]",thumbnail=logo,fanart=fanart,folder=False,isPlayable=True)
+
+
+
+	
+	
+	
+
+
 	
 	
 def cambia_hora_marcador(params):
@@ -267,6 +313,54 @@ def zap_marcador(params):
 		#Montamos la línea.
 		plugintools.runAddon(action="runPlugin",url=lanzo_spd,title=titulo,thumbnail=logo,fanart=fondo,folder=False,isPlayable=True)
 
+	canales = plugintools.find_single_match(data,'Canales AceStream(.*?)</ul>')  # Cojo el bloque de canales Acestream
+	cada_canal = plugintools.find_multiple_matches(canales,'href=(.*?)/a>')  # Separo todos los canales y los monto en su url
+				
+	#Los saco a pantalla
+	for item in cada_canal:
+		canal_url = plugintools.find_single_match(item,'"(.*?)"')
+		nombre_canal = plugintools.find_single_match(item,'">(.*?)<')
+		titulo = "[COLOR aqua]- Ver el " + nombre_canal + "a  [COLOR red][I](Acestream)[/I][/COLOR]"
+
+		el_canal = "http://tumarcador.xyz/" + canal_url
+		#lanzo_spd = url_montada.replace("MI_CANAL", el_canal)
+		
+		#Montamos la línea.
+		#plugintools.runAddon(action="runPlugin",url=lanzo_spd,title=titulo,thumbnail=logo,fanart=fondo,folder=False,isPlayable=True)
+		plugintools.add_item(action="saca_acestream",url=el_canal,title=titulo,thumbnail=logo, fanart=fondo, folder=True, isPlayable=False)
+
+
+
+
+
+def saca_acestream(params):		
+	url = params.get("url")
+	titulo = params.get("title")
+	fondo = params.get("fanart")
+	logo = params.get("thumbnail")
+	
+	
+
+	r=requests.get(url)
+	data = r.content
+
+	plugintools.add_item(action="",url="",title="          "+titulo.replace("-",""),thumbnail=logo,fanart=fondo,folder=False,isPlayable=False)
+	plugintools.add_item(action="",url="",title="",thumbnail=logo, fanart=fondo, folder=False, isPlayable=False)
+
+	#Busco los 2 enlaces aces... el m3u8 y el acestream
+	m3u8 = plugintools.find_single_match(data,'file: "(.*?)"')
+	aces = "acestream://" + plugintools.find_single_match(data,'acestream://(.*?)"')
+
+	url_montada2 = 'plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url='+m3u8+'%26referer=http://tumarcador.xyz/'
+	url_montada3 = 'plugin://plugin.video.SportsDevil/?mode=1&amp;item=catcher%3dstreams%26url='+aces+'%26referer=http://tumarcador.xyz/'
+	
+	plugintools.add_item(action="runPlugin",url=url_montada3,title="[COLOR red]-Ver en Formato Acestream[/COLOR]",thumbnail=logo,fanart=fanart,folder=False,isPlayable=True)
+	plugintools.add_item(action="runPlugin",url=url_montada2,title="[COLOR blue]-Ver en Formato m3u8[/COLOR]",thumbnail=logo,fanart=fanart,folder=False,isPlayable=True)
+
+	
+		
+		
+		
 
 def muestra_guia(params):
 	fanart = params.get("fanart")
